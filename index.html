@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#111113">
-  <meta name="description" content="The Food Hub - Restaurant & Café Digital QR Menu. Good Food. Good Mood.">
-  <title>The Food Hub | Restaurant & Café Menu</title>
+  <meta name="description" content="The Copper Mill - Artisan Bistro & Café Digital QR Menu. Handcrafted plates, specialty coffee & bakery.">
+  <title>The Copper Mill | Bistro & Café Menu</title>
 
-  <!-- Google Fonts: Inter & Outfit -->
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
   <style>
     /* ==========================================================================
        CSS VARIABLES & THEME CONFIGURATION
-       Easily customizable for any restaurant re-branding
        ========================================================================== */
     :root {
       --primary-color: #121216;
@@ -31,7 +30,7 @@
       --text-muted: #6c7381;
       --text-light: #9aa1ad;
       --veg-color: #108a38;
-      --non-veg-color: #d12e2e;
+      --non-veg-color: #c93b3b;
       --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
       --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.07);
       --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
@@ -67,7 +66,7 @@
       letter-spacing: -0.015em;
     }
 
-    /* App Container for seamless mobile-first experience */
+    /* App Shell Container */
     .app-shell {
       max-width: 540px;
       margin: 0 auto;
@@ -78,12 +77,11 @@
       box-shadow: 0 0 40px rgba(0,0,0,0.06);
     }
 
-    /* */
     /* Header & Branding Area */
     .header-banner {
       background: linear-gradient(180deg, #111114 0%, #1a1a22 100%);
       color: #ffffff;
-      padding: 24px 20px 20px 20px;
+      padding: 26px 20px 22px 20px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -98,7 +96,7 @@
       transform: translateX(-50%);
       width: 220px;
       height: 160px;
-      background: radial-gradient(circle, rgba(245, 166, 35, 0.18) 0%, rgba(245, 166, 35, 0) 70%);
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.2) 0%, rgba(245, 166, 35, 0) 70%);
       pointer-events: none;
     }
 
@@ -179,7 +177,6 @@
       color: var(--accent-color);
     }
 
-    /* */
     /* Sticky Controls Container */
     .sticky-panel {
       position: sticky;
@@ -310,7 +307,7 @@
       display: flex;
     }
 
-    /* Diet Toggle Filter (All / Veg / Non-Veg) */
+    /* Diet Toggle Filter (All / Veg / Meat) */
     .diet-filter-group {
       display: flex;
       background: #23232b;
@@ -323,7 +320,7 @@
     .diet-btn {
       background: transparent;
       border: none;
-      padding: 6px 9px;
+      padding: 6px 10px;
       border-radius: 8px;
       font-size: 0.74rem;
       font-weight: 700;
@@ -354,7 +351,6 @@
     .diet-indicator-dot.veg { background-color: var(--veg-color); }
     .diet-indicator-dot.non-veg { background-color: var(--non-veg-color); }
 
-    /* */
     /* Menu Content Section */
     .menu-main {
       padding: 16px;
@@ -376,7 +372,7 @@
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--primary-color);
-      margin: 18px 0 10px 4px;
+      margin: 20px 0 12px 4px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -389,7 +385,7 @@
       background: var(--card-border);
     }
 
-    /* Food Cards - Mobile First Layout (Compact Row) */
+    /* Food Cards - Mobile First Layout */
     .dish-card {
       background-color: var(--card-color);
       border-radius: var(--radius-md);
@@ -418,8 +414,8 @@
     /* Left Image & Bestseller overlay */
     .dish-thumb-wrap {
       position: relative;
-      width: 96px;
-      height: 96px;
+      width: 98px;
+      height: 98px;
       flex-shrink: 0;
       border-radius: 12px;
       overflow: hidden;
@@ -454,10 +450,10 @@
       z-index: 2;
     }
 
-    /* Center/Middle Information */
+    /* Middle Dish Information */
     .dish-content {
       flex: 1;
-      min-width: 0; /* Prevents text overflow */
+      min-width: 0;
       display: flex;
       flex-direction: column;
       gap: 4px;
@@ -469,7 +465,7 @@
       gap: 6px;
     }
 
-    /* Veg / Non-Veg iconic symbols */
+    /* Dietary indicator icons */
     .diet-icon {
       width: 14px;
       height: 14px;
@@ -596,8 +592,7 @@
       cursor: pointer;
     }
 
-    /* */
-    /* Food Details Bottom Sheet / Modal */
+    /* Food Details Modal */
     .modal-backdrop {
       position: fixed;
       top: 0;
@@ -881,7 +876,6 @@
       background: #faeedb;
     }
 
-    /* */
     /* Dark Minimal Footer */
     .app-footer {
       background: #111114;
@@ -955,7 +949,7 @@
       transform: translateY(-3px);
     }
 
-    /* Desktop Enhancement */
+    /* Desktop Viewport Enhancement */
     @media (min-width: 640px) {
       .app-shell {
         margin: 24px auto;
@@ -984,24 +978,24 @@
        HEADER & BRANDING SECTION
        ========================================== -->
   <header class="header-banner">
-    <!-- Chef Hat SVG Icon -->
+    <!-- Bistro Cup & Fork SVG Icon -->
     <div class="brand-icon-wrapper" aria-hidden="true">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 13.8a4.5 4.5 0 1 1-1.8-8.64 5 5 0 0 1 9.6-1.56 5 5 0 0 1 7.6 5.7 4.5 4.5 0 0 1-1.4 4.5"/>
-        <path d="M6 17h12"/>
-        <path d="M7 21h10"/>
-        <path d="M6 14v7"/>
-        <path d="M18 14v7"/>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+        <line x1="6" y1="1" x2="6" y2="4"></line>
+        <line x1="10" y1="1" x2="10" y2="4"></line>
+        <line x1="14" y1="1" x2="14" y2="4"></line>
       </svg>
     </div>
 
     <!-- Restaurant Titles -->
-    <h1 class="brand-title">The Food Hub</h1>
-    <div class="brand-subtitle">Restaurant &amp; Café</div>
+    <h1 class="brand-title">The Copper Mill</h1>
+    <div class="brand-subtitle">Artisan Bistro &amp; Café</div>
     
     <!-- Tagline -->
     <p class="brand-tagline">
-      Good Food. Good Mood. <span>✨</span>
+      Craft Kitchen &bull; Specialty Coffee &bull; Bakery <span>✨</span>
     </p>
   </header>
 
@@ -1014,14 +1008,14 @@
       <nav class="category-nav" id="categoryNav" aria-label="Menu categories">
         <button class="cat-pill active" data-category="all">All</button>
         <button class="cat-pill" data-category="Starters">Starters</button>
-        <button class="cat-pill" data-category="Main Course">Main Course</button>
+        <button class="cat-pill" data-category="Mains">Mains</button>
         <button class="cat-pill" data-category="Pizza">Pizza</button>
         <button class="cat-pill" data-category="Beverages">Beverages</button>
         <button class="cat-pill" data-category="Desserts">Desserts</button>
       </nav>
     </div>
 
-    <!-- Search Box and Veg/Non-Veg Filter Controls -->
+    <!-- Search Box and Veg / Meat Filter Controls -->
     <div class="search-diet-row">
       <div class="search-box">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1032,7 +1026,7 @@
           type="text" 
           id="searchInput" 
           class="search-input" 
-          placeholder="Search dishes (e.g. Biryani, Fries)..." 
+          placeholder="Search menu (e.g. Burger, Truffle, Latte)..." 
           autocomplete="off"
           spellcheck="false"
         >
@@ -1041,11 +1035,11 @@
 
       <div class="diet-filter-group" aria-label="Dietary preference">
         <button class="diet-btn active" data-diet="all" title="Show all items">All</button>
-        <button class="diet-btn" data-diet="veg" title="Vegetarian only">
+        <button class="diet-btn" data-diet="veg" title="Vegetarian dishes">
           <span class="diet-indicator-dot veg"></span>Veg
         </button>
-        <button class="diet-btn" data-diet="non-veg" title="Non-Vegetarian only">
-          <span class="diet-indicator-dot non-veg"></span>Non
+        <button class="diet-btn" data-diet="non-veg" title="Meat and seafood dishes">
+          <span class="diet-indicator-dot non-veg"></span>Meat
         </button>
       </div>
     </div>
@@ -1057,17 +1051,17 @@
   <main class="menu-main">
     <div class="results-count-bar">
       <span id="categoryLabel">All Dishes</span>
-      <span id="itemsCounter">18 Items</span>
+      <span id="itemsCounter">19 Items</span>
     </div>
 
-    <!-- Render target for dynamic food cards -->
+    <!-- Dynamic Food Cards List -->
     <div id="menuCardsList" aria-live="polite"></div>
 
-    <!-- Empty State Message -->
+    <!-- Empty State -->
     <div id="emptyState" class="empty-state" style="display: none;">
       <span class="empty-icon">🍽️</span>
       <h3 class="empty-title">No Dishes Found</h3>
-      <p class="empty-desc">We couldn't find any dishes matching your criteria. Try adjusting your search or filters.</p>
+      <p class="empty-desc">We couldn't find any dishes matching your query. Try clearing filters or searching for another dish.</p>
       <button class="reset-btn" id="resetFiltersBtn">View Full Menu</button>
     </div>
   </main>
@@ -1079,16 +1073,14 @@
     <div class="info-card-header">
       <div class="info-brand-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-          <line x1="6" y1="1" x2="6" y2="4"></line>
-          <line x1="10" y1="1" x2="10" y2="4"></line>
-          <line x1="14" y1="1" x2="14" y2="4"></line>
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+          <path d="M7 2v20"></path>
+          <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
         </svg>
       </div>
       <div>
-        <h2 class="info-brand-title">The Food Hub</h2>
-        <p class="info-brand-sub">Dine-in &amp; Takeaway</p>
+        <h2 class="info-brand-title">The Copper Mill Bistro</h2>
+        <p class="info-brand-sub">Table Service &bull; Takeout &bull; Patio</p>
       </div>
     </div>
 
@@ -1103,7 +1095,7 @@
         </div>
         <div class="info-detail">
           <h4>Opening Hours</h4>
-          <p>Mon – Sun &bull; 10:00 AM – 11:00 PM</p>
+          <p>Mon – Sun &bull; 7:30 AM – 10:00 PM</p>
         </div>
       </div>
 
@@ -1115,8 +1107,8 @@
           </svg>
         </div>
         <div class="info-detail">
-          <h4>Direct Contact</h4>
-          <p>+91 98765 43210</p>
+          <h4>Reservations &amp; Orders</h4>
+          <p>+1 (555) 782-9420</p>
         </div>
       </div>
 
@@ -1129,25 +1121,25 @@
           </svg>
         </div>
         <div class="info-detail">
-          <h4>Location</h4>
-          <p>Jaipur, Rajasthan, India</p>
+          <h4>Address</h4>
+          <p>418 Hudson Street, West Village, New York, NY</p>
         </div>
       </div>
     </div>
 
     <!-- Action CTA Buttons -->
     <div class="info-actions-row">
-      <a href="tel:+919876543210" class="action-btn call-btn">
+      <a href="tel:+15557829420" class="action-btn call-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
-        <span>Call Waiter / Desk</span>
+        <span>Call Server / Host</span>
       </a>
-      <a href="https://maps.google.com/?q=The+Food+Hub+Jaipur+Rajasthan" target="_blank" rel="noopener noreferrer" class="action-btn directions-btn">
+      <a href="https://maps.google.com/?q=Hudson+Street+West+Village+New+York" target="_blank" rel="noopener noreferrer" class="action-btn directions-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
         </svg>
-        <span>Get Directions</span>
+        <span>Directions</span>
       </a>
     </div>
   </section>
@@ -1156,10 +1148,10 @@
        FOOTER
        ========================================== -->
   <footer class="app-footer">
-    <div class="footer-title">The Food Hub</div>
-    <div class="footer-subtitle">Restaurant &amp; Café</div>
-    <p class="footer-note">Thank you for dining with us ❤️</p>
-    <p class="footer-copy">&copy; 2026 The Food Hub. All Rights Reserved.</p>
+    <div class="footer-title">The Copper Mill</div>
+    <div class="footer-subtitle">Bistro &amp; Café</div>
+    <p class="footer-note">Locally Sourced &bull; Made Fresh Daily &bull; NYC</p>
+    <p class="footer-copy">&copy; 2026 The Copper Mill Hospitality Group. All Rights Reserved.</p>
   </footer>
 
 </div>
@@ -1186,19 +1178,19 @@
           <span id="modalDietIcon" class="diet-icon veg"></span>
           <span id="modalDietText" style="font-size: 0.78rem; font-weight: 700;">Vegetarian</span>
           <span id="modalCategory" class="modal-category-tag">Starters</span>
-          <span id="modalBestseller" class="bestseller-badge" style="position: static; display: none;">★ Bestseller</span>
+          <span id="modalBestseller" class="bestseller-badge" style="position: static; display: none;">★ House Special</span>
         </div>
 
         <h3 id="modalName" class="modal-dish-name">Dish Name</h3>
-        <div id="modalPrice" class="modal-price-tag">₹0</div>
+        <div id="modalPrice" class="modal-price-tag">$0.00</div>
 
         <div class="modal-divider"></div>
 
         <p id="modalDesc" class="modal-dish-desc">Detailed dish description goes here.</p>
 
         <div class="modal-meta-box">
-          <span>Freshly Prepared on Order</span>
-          <span style="color: var(--accent-hover); font-weight: 700;">Chef's Special</span>
+          <span>Freshly Prepared to Order</span>
+          <span style="color: var(--accent-hover); font-weight: 700;">Chef's Selection</span>
         </div>
       </div>
     </div>
@@ -1215,203 +1207,211 @@
 
 <script>
   /**
-   * THE FOOD HUB - QR Digital Menu
-   * Structured Clean Database
-   * Easily modifiable for any client or restaurant branch
+   * THE COPPER MILL - QR Digital Menu Database
+   * Contemporary Western Bistro & Café Cuisine with USD Pricing
    */
   const MENU_DATABASE = [
-    // STARTERS
+    // STARTERS & APPETIZERS
     {
       id: "st-1",
-      name: "French Fries",
+      name: "Truffle Parmesan Fries",
       category: "Starters",
-      price: 120,
-      description: "Crispy golden fries served with our signature dip.",
+      price: 9.50,
+      description: "Crisp hand-cut Russet fries tossed with white truffle oil, rosemary, shaved 24-month aged Parmigiano Reggiano, and roasted garlic aioli.",
       isVeg: true,
       bestseller: true,
       image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "st-2",
-      name: "Veg Spring Rolls",
+      name: "Heirloom Tomato Bruschetta",
       category: "Starters",
-      price: 150,
-      description: "Crispy rolls filled with fresh vegetables and herbs.",
+      price: 11.00,
+      description: "Charred sourdough crust with marinated heirloom cherry tomatoes, sweet basil, fresh burrata, and aged Modena balsamic drizzle.",
       isVeg: true,
       bestseller: false,
-      image: "https://www.cubesnjuliennes.com/wp-content/uploads/2021/01/Spring-Roll-Recipe.jpg"
+      image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "st-3",
-      name: "Chicken Wings",
+      name: "Buffalo Hot Honey Wings",
       category: "Starters",
-      price: 180,
-      description: "Juicy chicken wings tossed in our house special sauce.",
+      price: 14.50,
+      description: "Crispy jumbo wings tossed in cayenne buffalo and artisanal hot honey glaze, served with blue cheese crema and celery sticks.",
       isVeg: false,
-      bestseller: false,
+      bestseller: true,
       image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "st-4",
-      name: "Paneer Tikka",
+      name: "Crispy Calamari Fritti",
       category: "Starters",
-      price: 190,
-      description: "Smoky grilled paneer with peppers and Indian spices.",
-      isVeg: true,
-      bestseller: true,
-      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80"
+      price: 15.00,
+      description: "Tender buttermilk-soaked wild squid with pickled hot cherry peppers, charred lemon wheel, and house-made smoked paprika remoulade.",
+      isVeg: false,
+      bestseller: false,
+      image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80"
     },
 
-    // MAIN COURSE
+    // MAINS
     {
       id: "mc-1",
-      name: "Paneer Butter Masala",
-      category: "Main Course",
-      price: 220,
-      description: "Cottage cheese cooked in a rich buttery tomato gravy.",
-      isVeg: true,
-      bestseller: false,
-      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80"
+      name: "The Copper Smash Cheeseburger",
+      category: "Mains",
+      price: 16.50,
+      description: "Double prime Black Angus patties, sharp Vermont cheddar, caramelized Vidalia onions, dill pickle chips, and secret bistro sauce on a brioche bun. Served with fries.",
+      isVeg: false,
+      bestseller: true,
+      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "mc-2",
-      name: "Chicken Biryani",
-      category: "Main Course",
-      price: 260,
-      description: "Fragrant basmati rice cooked with spiced chicken and aromatics.",
+      name: "Pan-Seared Atlantic Salmon",
+      category: "Mains",
+      price: 24.00,
+      description: "Crisp-skin sustainable salmon fillet over tender roasted asparagus, lemon-herb quinoa pilaf, and citrus beurre blanc.",
       isVeg: false,
-      bestseller: true,
-      image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80"
+      bestseller: false,
+      image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "mc-3",
-      name: "Dal Makhani",
-      category: "Main Course",
-      price: 190,
-      description: "Slow-cooked black lentils finished with butter and cream.",
+      name: "Wild Mushroom Tagliatelle",
+      category: "Mains",
+      price: 18.50,
+      description: "Fresh egg ribbons tossed with sautéed cremini, shiitake, and chanterelle mushrooms, white wine reduction, fresh thyme, and cream.",
       isVeg: true,
-      bestseller: false,
-      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80"
+      bestseller: true,
+      image: "https://images.unsplash.com/photo-1621996346565-e3d5d6281729?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "mc-4",
-      name: "Butter Chicken",
-      category: "Main Course",
-      price: 280,
-      description: "Tender chicken cooked in a creamy, velvety tomato gravy.",
+      name: "Nashville Hot Chicken Sandwich",
+      category: "Mains",
+      price: 15.50,
+      description: "Crispy fried buttermilk chicken breast dunked in chili spice oil, tangy creamy coleslaw, and sweet honey mustard on potato roll.",
       isVeg: false,
       bestseller: false,
-      image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
     },
 
     // PIZZA
     {
       id: "pz-1",
-      name: "Margherita Pizza",
+      name: "Margherita di Bufala",
       category: "Pizza",
-      price: 250,
-      description: "Classic pizza with mozzarella, tomato and fresh basil leaves.",
+      price: 15.50,
+      description: "Slow-fermented sourdough crust, San Marzano tomato sauce, fresh buffalo mozzarella, fragrant genovese basil, and extra virgin olive oil.",
       isVeg: true,
-      bestseller: false,
+      bestseller: true,
       image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "pz-2",
-      name: "Farmhouse Pizza",
+      name: "Spicy Pepperoni & Hot Honey",
       category: "Pizza",
-      price: 320,
-      description: "Loaded with capsicum, onion, tomato, mushrooms and cheese.",
-      isVeg: true,
+      price: 17.50,
+      description: "Crisp cupped artisan pepperoni cups, whole-milk shredded mozzarella, red pepper chili flakes, and hot wildflower honey drizzle.",
+      isVeg: false,
+      bestseller: true,
+      image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      id: "pz-3",
+      name: "Prosciutto & Wild Arugula",
+      category: "Pizza",
+      price: 18.50,
+      description: "White garlic base, fontina cheese, 18-month Prosciutto di Parma, dressed baby arugula, shaved parmesan, and lemon oil.",
+      isVeg: false,
       bestseller: false,
       image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80"
     },
     {
-      id: "pz-3",
-      name: "Chicken Tikka Pizza",
+      id: "pz-4",
+      name: "Truffled Forest Mushroom",
       category: "Pizza",
-      price: 350,
-      description: "Cheesy pizza topped with spiced succulent chicken tikka.",
-      isVeg: false,
-      bestseller: true,
+      price: 17.00,
+      description: "Roasted garlic ricotta cream, medley of wild mushrooms, taleggio cheese, fresh rosemary, and white truffle essence.",
+      isVeg: true,
+      bestseller: false,
       image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
     },
 
     // BEVERAGES
     {
       id: "bv-1",
-      name: "Cold Coffee",
+      name: "Iced Vanilla Oat Milk Latte",
       category: "Beverages",
-      price: 120,
-      description: "Creamy iced coffee topped with a hint of dark chocolate froth.",
+      price: 5.75,
+      description: "Double shot of single-origin espresso, steamed velvety oat milk, and house-made Madagascar vanilla bean syrup over artisanal clear ice.",
       isVeg: true,
       bestseller: true,
       image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "bv-2",
-      name: "Fresh Lime Soda",
+      name: "Cold Brew Citrus Tonic",
       category: "Beverages",
-      price: 80,
-      description: "Refreshing fizzy soda infused with freshly squeezed lime & mint.",
+      price: 5.25,
+      description: "20-hour steep Colombian cold brew layered over Indian tonic water, freshly squeezed blood orange, and rosemary sprig.",
       isVeg: true,
       bestseller: false,
       image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "bv-3",
-      name: "Masala Chai",
+      name: "Ceremonial Uji Matcha Latte",
       category: "Beverages",
-      price: 60,
-      description: "Traditional brewed Indian tea with cardamom, ginger and spices.",
+      price: 6.25,
+      description: "Stone-ground Japanese organic matcha, frothed almond milk, lightly sweetened with pure organic blue agave.",
       isVeg: true,
       bestseller: false,
-      image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "bv-4",
-      name: "Chocolate Shake",
+      name: "Wild Blackberry Mint Sparkler",
       category: "Beverages",
-      price: 140,
-      description: "Rich thick chocolate milkshake topped with chocolate chips.",
+      price: 4.75,
+      description: "Muddled pacific blackberries, Meyer lemon juice, freshly picked spearmint, and crisp sparkling spring water.",
       isVeg: true,
       bestseller: false,
-      image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80"
     },
 
     // DESSERTS
     {
       id: "ds-1",
-      name: "Chocolate Brownie",
+      name: "Molten Valrhona Lava Cake",
       category: "Desserts",
-      price: 150,
-      description: "Warm fudgy chocolate brownie served with hot chocolate fudge.",
+      price: 9.50,
+      description: "Warm 70% dark chocolate souffle cake with a liquid cocoa center, dusted with powdered sugar and paired with Madagascar vanilla gelato.",
       isVeg: true,
       bestseller: true,
       image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "ds-2",
-      name: "Gulab Jamun",
+      name: "Classic Venetian Tiramisu",
       category: "Desserts",
-      price: 90,
-      description: "Warm golden dumplings soaked in fragrant cardamom sugar syrup.",
+      price: 8.75,
+      description: "Savoiardi ladyfingers soaked in dark espresso and Marsala wine, layered with airy mascarpone mousse and Dutch cocoa powder.",
       isVeg: true,
-      bestseller: false,
-      image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80"
+      bestseller: true,
+      image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "ds-3",
-      name: "Ice Cream Sundae",
+      name: "New York Salted Caramel Cheesecake",
       category: "Desserts",
-      price: 130,
-      description: "Scoops of vanilla and strawberry topped with nuts and cherries.",
+      price: 8.50,
+      description: "Velvety baked cream cheese with a buttery honey-graham crust, crowned with warm Maldon flaky sea-salt caramel.",
       isVeg: true,
       bestseller: false,
-      image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
     }
   ];
 
-  /* Fallback Image Generator for offline or broken link safety */
   const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80";
 
   // Application State
@@ -1445,10 +1445,15 @@
   const modalDietText = document.getElementById("modalDietText");
   const modalBestseller = document.getElementById("modalBestseller");
 
-  /* */
+  /**
+   * Currency formatter helper for clean USD display
+   */
+  function formatUSD(amount) {
+    return `$${amount.toFixed(2)}`;
+  }
 
   /**
-   * Filters the master database according to active state
+   * Filters the master database according to active filters
    */
   function getFilteredItems() {
     return MENU_DATABASE.filter(item => {
@@ -1457,7 +1462,10 @@
 
       // 2. Search Query Filter
       const q = state.searchQuery.trim().toLowerCase();
-      const matchesSearch = !q || item.name.toLowerCase().includes(q) || item.description.toLowerCase().includes(q) || item.category.toLowerCase().includes(q);
+      const matchesSearch = !q || 
+        item.name.toLowerCase().includes(q) || 
+        item.description.toLowerCase().includes(q) || 
+        item.category.toLowerCase().includes(q);
 
       // 3. Diet Filter (all / veg / non-veg)
       let matchesDiet = true;
@@ -1477,7 +1485,7 @@
   function renderMenu() {
     const items = getFilteredItems();
     
-    // Update counters and header text
+    // Update counters and heading
     itemsCounter.textContent = `${items.length} ${items.length === 1 ? 'Item' : 'Items'}`;
     if (state.searchQuery.trim()) {
       categoryLabel.textContent = `Search results for "${state.searchQuery.trim()}"`;
@@ -1496,11 +1504,11 @@
 
     emptyState.style.display = "none";
 
-    // If 'all' is chosen and no search query, group visually by category for better menu flow
+    // If 'all' is active without search or dietary filter, group by category
     const isGroupedView = state.selectedCategory === "all" && !state.searchQuery.trim() && state.selectedDiet === "all";
 
     if (isGroupedView) {
-      const categoriesOrder = ["Starters", "Main Course", "Pizza", "Beverages", "Desserts"];
+      const categoriesOrder = ["Starters", "Mains", "Pizza", "Beverages", "Desserts"];
       let html = "";
 
       categoriesOrder.forEach(cat => {
@@ -1532,16 +1540,16 @@
   }
 
   /**
-   * Creates markup for a single compact mobile-optimized card
+   * Creates markup for a single compact card
    */
   function createDishCardHTML(item) {
     const dietClass = item.isVeg ? "veg" : "non-veg";
-    const dietAlt = item.isVeg ? "Vegetarian" : "Non-Vegetarian";
+    const dietAlt = item.isVeg ? "Vegetarian" : "Contains Meat/Fish";
 
     return `
-      <article class="dish-card" data-id="${item.id}" tabindex="0" role="button" aria-label="${item.name}, ₹${item.price}">
+      <article class="dish-card" data-id="${item.id}" tabindex="0" role="button" aria-label="${item.name}, ${formatUSD(item.price)}">
         <div class="dish-thumb-wrap">
-          ${item.bestseller ? '<span class="bestseller-badge">★ Bestseller</span>' : ''}
+          ${item.bestseller ? '<span class="bestseller-badge">★ Favorite</span>' : ''}
           <img 
             src="${item.image}" 
             alt="${item.name}" 
@@ -1557,7 +1565,7 @@
           </div>
           <p class="dish-desc">${item.description}</p>
           <div class="dish-footer-row">
-            <span class="dish-price">₹${item.price}</span>
+            <span class="dish-price">${formatUSD(item.price)}</span>
             <span class="dish-view-btn">
               Details
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1570,8 +1578,6 @@
     `;
   }
 
-  /* */
-
   /**
    * Opens bottom-sheet detail modal with item specifics
    */
@@ -1583,7 +1589,7 @@
     modalImg.onerror = () => { modalImg.src = FALLBACK_IMAGE; };
     modalImg.alt = item.name;
     modalName.textContent = item.name;
-    modalPrice.textContent = `₹${item.price}`;
+    modalPrice.textContent = formatUSD(item.price);
     modalDesc.textContent = item.description;
     modalCategory.textContent = item.category;
 
@@ -1594,7 +1600,7 @@
       modalDietText.style.color = "var(--veg-color)";
     } else {
       modalDietIcon.className = "diet-icon non-veg";
-      modalDietText.textContent = "Non-Vegetarian";
+      modalDietText.textContent = "Chef's Cut / Seafood";
       modalDietText.style.color = "var(--non-veg-color)";
     }
 
@@ -1604,7 +1610,7 @@
     // Show modal
     dishModal.classList.add("open");
     dishModal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden"; // prevent background scroll
+    document.body.style.overflow = "hidden";
   }
 
   /**
@@ -1638,8 +1644,6 @@
       btn.classList.add("active");
       
       state.selectedCategory = btn.getAttribute("data-category");
-      
-      // Auto-scroll pill into view smoothly
       btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
       
       renderMenu();
@@ -1652,7 +1656,6 @@
     const val = e.target.value;
     state.searchQuery = val;
     
-    // Toggle search clear button
     if (val.length > 0) {
       searchClearBtn.classList.add("visible");
     } else {
@@ -1674,7 +1677,7 @@
     renderMenu();
   });
 
-  /* Diet buttons toggle (All / Veg / Non-veg) */
+  /* Diet buttons toggle */
   dietButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       dietButtons.forEach(b => b.classList.remove("active"));
@@ -1702,7 +1705,7 @@
     renderMenu();
   });
 
-  /* Back to Top floating button handler */
+  /* Back to Top floating button */
   window.addEventListener("scroll", () => {
     if (window.scrollY > 320) {
       backToTopBtn.classList.add("visible");
